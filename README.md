@@ -23,9 +23,9 @@
 - **Top-Down Approach**: Starting with the larger system and breaking it down into smaller components.
 - **Bottom-Up Approach**: Building the system from the ground up, starting with individual components.
 
-## Exercise
+### Exercise
 
-### Requirement Analysis
+#### Requirement Analysis
 
 **Scenario**: *Imagine you are tasked with designing a system for an online e-commerce platform that facilitates the buying and selling of various products. The platform aims to connect buyers with sellers, providing a seamless shopping experience. Your goal is to analyze and document the system requirements.*
 

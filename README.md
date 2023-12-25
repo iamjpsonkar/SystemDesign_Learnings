@@ -23,11 +23,10 @@
 - **Top-Down Approach**: Starting with the larger system and breaking it down into smaller components.
 - **Bottom-Up Approach**: Building the system from the ground up, starting with individual components.
 
-### Exercise
+### Exercise | Requirement Analysis
 
-#### Requirement Analysis
-
-**Scenario**: *Imagine you are tasked with designing a system for an online e-commerce platform that facilitates the buying and selling of various products. The platform aims to connect buyers with sellers, providing a seamless shopping experience. Your goal is to analyze and document the system requirements.*
+####  **Scenario**: 
+*Imagine you are tasked with designing a system for an online e-commerce platform that facilitates the buying and selling of various products. The platform aims to connect buyers with sellers, providing a seamless shopping experience. Your goal is to analyze and document the system requirements.*
 
 #### **Tasks**
 
@@ -86,11 +85,12 @@
     - Introduction to use cases and user stories as tools for requirement elicitation.
     - Creating effective use cases and user stories.
 
-### Exercise
+### Exercise | Requirements analysis
 
-**Scenario**: *You are now tasked with gathering requirements for an online banking system. The system aims to provide a secure and user-friendly platform for customers to manage their accounts, transfer funds, and view transaction history.*
+#### **Scenario**: 
+*You are now tasked with gathering requirements for an online banking system. The system aims to provide a secure and user-friendly platform for customers to manage their accounts, transfer funds, and view transaction history.*
 
-**Tasks**:
+#### **Tasks**:
 1. **Stakeholder Identification**:
 Identify and analyze stakeholders for the online banking system.
 Consider both internal (bank employees) and external (customers) stakeholders.

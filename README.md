@@ -426,3 +426,126 @@ You are tasked with designing the system architecture for an e-commerce platform
         - **Caching**: Use a cache system, to avoid extra load on the database.
         - **Asynchronous Processing**: Use message queues for asynchronous processing of tasks to improve system responsiveness
 ---
+
+## **Database Design**
+*Database design serves as the backbone of a system, influencing its efficiency, scalability, and data integrity.*
+
+### **Importance of Database Design**
+*Database design is a critical aspect of system development, influencing the efficiency, reliability, and performance of the entire system.*
+
+1. **Data Integrity**: Ensuring accuracy and consistency of data by avoiding redundancy and dependency issues.
+2. **Efficient Retrieval**: Designing for efficient data retrieval and storage, particularly in scenarios with large datasets.
+3. **Scalability**: Allowing the system to scale seamlessly as data volume and user interactions grow.
+4. **Relationships**: Simplifying database maintenance tasks, reducing the likelihood of errors and improving overall system reliability.
+
+### **Key Concepts in Database Design**
+
+1. **Entity-Relationship (ER) Modeling**:
+    - **Definition**: A visual representation of the relationships between different entities (objects) in the system.
+    - **Purpose**: Helps define the structure of the database and how data entities are related.
+    - **Practical Application**: Identify entities (e.g., User, Product, Order), and attributes, and establish relationships. For example, a User places multiple Orders.
+2. **Normalization**:
+    - **Definition**: A process of organizing data to eliminate redundancy and dependency issues.
+    - **Purpose**: Reduces data anomalies, improves data integrity, and simplifies database maintenance.
+    - **Practical Application**: Identify attributes for each entity and apply normalization rules to minimize data anomalies. For instance, ensuring that data is stored in the most efficient way possible, such as avoiding repeating groups.
+3. **Indexing**:
+    - **Definition**: Creating indexes on specific columns to speed up data retrieval operations.
+    - **Purpose**: Enhances query performance by allowing the database engine to quickly locate and access relevant data.
+    - **Practical Application**: Identify columns frequently used in queries and create indexes to optimize data access. For example, indexing on the "product_id" column for efficient product lookups
+
+### **Exercise | Database Design - Entity-Relationship Modeling**
+
+#### **Scenario**:
+You are tasked with designing the database for the e-commerce platform discussed in the previous exercise. The database should capture information about users, products, orders, and transactions.
+
+#### **Tasks**:
+- **Identify Entities**:
+    - List the main entities relevant to the e-commerce platform (e.g., User, Product, Order).
+- **Define Relationships**:
+    - Establish relationships between entities (e.g., A User can place multiple Orders).
+- **Attributes and Data Types**:
+    - Identify key attributes for each entity and define their data types (e.g., User has attributes like username, email, password).
+- **Normalization**:
+    - Apply normalization techniques to eliminate redundancy and dependency issues.
+
+### Solution
+
+---
+- **Identify Entities**:
+    1. **User**
+    2. **Product**
+    3. **Order**
+    4. **Transaction**
+    5. **Payment Mode**
+    6. **Aggregator**
+    7. **COD Data**
+    8. **Product Level COD DATA**
+- **Define Relationships**:
+    - **User** relates with
+        - **Order**: User A, placed an order with order_id as `ord0000001`
+        - **Transaction**: User A, paid some amount with transacton_id as `TR0000001`
+        - **COD Data**: User A, has COD data, such as cod order limit  with id as `COD0000001`
+    - **Product** relates with
+        - **Product Level COD DATA**: Product P, has COD data such as product level cod charges
+    - **Order** relates with
+        - **User**: Order is placed by User
+        - **Product**: The order contains a list of product IDs, which were part of the order
+        - **Transaction**: Order payments are linked with a transaction
+        - **COD Data**: If COD order, all details for COD order linked
+    - **Transaction**: relates with
+        - **User**: Each transaction is linked with a user
+        - **Order**: Each transaction is linked with an order
+        - **Payment Mode** Each transaction is linked with a payment mode.
+    - **Payment Mode**: relates with
+        - **Aggregator** Each payment mode is powered by an aggregator.
+    - **Aggregator**: relates with
+        - **Payment Mode**: Each payment mode is linked to an aggregator
+    - **COD Data** relates with
+        - **User**: Each user is linked with COD Data
+        - **Order**: Order is linked to COD Data if a COD order were placed
+    - **Product Level COD DATA**
+        - **Product**: Product level COD Data
+- **Attributes and Data Types**:
+    1. **User**
+        - user_id: String
+        - name: String
+        - email: String
+        - phone_number: String
+        - user_cod_id: String
+    2. **Product**
+        - product_id: String
+        - product_name: String
+        - product_price: Float
+        - prouct_cod_id: String
+    3. **Order**
+        - order_id: String
+        - transaction_id: String
+        - user_id: String
+        - amount: Float
+        - order_time: Datetime
+        - product_ids: String
+    4. **Transaction**
+        - transaction_id: String
+        - order_id: String
+        - user_id: String
+        - amount: Float
+        - is_cod: boolean
+        - payment_mode_id: Integer
+    5. **Payment Mode**
+        - payment_mode_id: Integer
+        - payment_mode_name: String
+        - aggregator_id: Integer
+    6. **Aggregator**
+        - aggregator_id: Integer
+        - aggregator_name: String
+        - is_active: boolean
+    7. **COD Data**
+        - cod_id: String
+        - cod_limit: Float
+        - user_id: String
+    8. **Product Level COD DATA**
+        - prouct_cod_id: String
+        - cod_limit: Float
+- **Normalization**
+    - Already in Normalized form
+---

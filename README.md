@@ -8,10 +8,10 @@
 System design is a crucial phase in the software development life cycle. It involves defining the architecture, components, modules, interfaces, and data for a system to meet specified requirements. Essentially, it's the process of making decisions about the system's structure and organization to achieve its desired functionality.
 
 ### **Key Aspects of System Design**
-1. Architecture: The overall structure and organization of the system.
-2. Components: The building blocks or modules that make up the system.
-3. Interfaces: How different components interact with each other.
-4. Data Design: Defining how data will be stored, accessed, and managed.
+1. **Architecture**: The overall structure and organization of the system.
+2. **Components**: The building blocks or modules that make up the system.
+3. **Interfaces**: How different components interact with each other.
+4. **Data Design**: Defining how data will be stored, accessed, and managed.
 
 ### **Importance of System Design**
 

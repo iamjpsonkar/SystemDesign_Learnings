@@ -59,6 +59,94 @@
 **Stakeholders**: Customer (Buyer), Seller
 
 **Dependencies/Constraints**: For this system to work, some products need to be present in the system and a logged-in, user can add the products and buy them from the seller.
-1. user must be logged-in, before buying
-2. seller must have added some products in web app, to get the desired result.
+1. user must be logged in, before buying
+2. the seller must have added some products in the web app, to get the desired result.
+---
+
+## Understanding System Requirements
+
+### Requirements analysis
+**Requirements analysis** is a critical phase in system design, and a thorough understanding of stakeholder needs is essential for a successful design.
+
+**Topics**:
+- Stakeholder Identification and Analysis:
+    - Techniques for identifying and analyzing stakeholders.
+    - Importance of understanding stakeholder perspectives and needs.
+
+
+- Requirements Gathering Techniques:
+    - Overview of common techniques such as interviews, surveys, and workshops.
+    - Selecting the appropriate technique based on the nature of the project.
+
+- Types of Requirements:
+    - Distinguishing between functional and non-functional requirements.
+    - Examples and importance of each type in system design.
+
+- Use Cases and User Stories:
+    - Introduction to use cases and user stories as tools for requirement elicitation.
+    - Creating effective use cases and user stories.
+
+### Exercise
+
+**Scenario**: *You are now tasked with gathering requirements for an online banking system. The system aims to provide a secure and user-friendly platform for customers to manage their accounts, transfer funds, and view transaction history.*
+
+**Tasks**:
+1. **Stakeholder Identification**:
+Identify and analyze stakeholders for the online banking system.
+Consider both internal (bank employees) and external (customers) stakeholders.
+2. **Requirements Gathering**:
+Choose and justify a requirements-gathering technique for the online banking system.
+Provide a sample set of questions or methods you would use in an interview or survey.
+3. **Types of Requirements**:
+List at least three functional and three non-functional requirements for the online banking system.
+4. **Use Cases and User Stories**:
+Create a use case or user story related to a fund transfer scenario in the online banking system.
+
+### Solution
+
+---
+**Requirement ID**: R00002
+
+**Description**: Requirement gathering for an online banking system.
+
+**Stakeholders**: New Customers (Users who will open a new account with the bank), Existing Customers (Users who have already an account with the bank), Bank employees (who will manage and maintain the fund), and the Bank itself, which has the actual funds and user data.
+
+**Dependencies/Constraints**:
+
+1. The bank must have funds to run the bank
+2. The bank also needs to have a management team.
+3. User group that must have money and interest in the bank.
+
+**Requirements Gathering**:
+
+1. Describe the size of the bank and the user group on which the bank will be focused.
+2. Feature:
+    - Secure fund management
+    - Secure user and their data management
+    - User-friendly UI
+    - viewing the transaction history
+    - fund transfer to another bank account
+    - new account creation
+3. Security, use encryption and https
+
+**Requirements**
+
+- Functional Requirements
+    1. Signup and Sign in
+    2. View Transaction History
+    3. Fund Transfer
+- Non Functional Requirements
+    1. Security of Data and Users
+    2. User-friendly UI
+    3. Fast and Efficient System
+
+**Use Cases and User Stories**
+Below is the complete journey
+1. User A creates an account in the bank
+2. Enters details of himself
+3. user A submits some money to the bank.
+4. user A checks the account balance
+5. user A transfers some funds to the account of existing user B
+6. user A and user B, both get notified about the money transfer
+7. Both the users check the new account balance, also the updated transaction history.
 ---

@@ -97,7 +97,7 @@ Common Traits in Well-Designed Systems:
 - **Reliability**: Reliability is a critical factor. Both systems have redundancy and fault-tolerance mechanisms in place to ensure uninterrupted service.
 - **Flexibility**: Flexibility is evident in the customizable nature of services provided by AWS and the adaptability of Google's infrastructure to support various applications.
 
-### Exercise | Requirement Gathering
+### Exercise | Requirement Analysis
 
 ####  **Scenario**: 
 *Imagine you are tasked with designing a system for an online e-commerce platform that facilitates the buying and selling of various products. The platform aims to connect buyers with sellers, providing a seamless shopping experience. Your goal is to analyze and document the system requirements.*
@@ -123,7 +123,7 @@ Common Traits in Well-Designed Systems:
     - **Definition**: Create clear and concise documentation for each identified requirement.
     - **Example Documentation Template**:
         - **Requirement ID**: R001
-        - **Description**: The system should allow registered users to add products to their shopping cartS.
+        - **Description**: The system should allow registered users to add products to their shopping carts.
         - **Priority**: High
         - **Stakeholders**: Customers, Sellers
         - **Dependencies/Constraints**: Users must be registered and logged in to add products to the shopping cart.
@@ -149,40 +149,125 @@ Common Traits in Well-Designed Systems:
 ### Requirements analysis
 **Requirements analysis** is a critical phase in system design, and a thorough understanding of stakeholder needs is essential for a successful design.
 
-**Topics**:
-- Stakeholder Identification and Analysis:
-    - Techniques for identifying and analyzing stakeholders.
-    - Importance of understanding stakeholder perspectives and needs.
+### **Stakeholder Identification and Analysis**
 
+#### **Techniques for Stakeholder Identification**:
 
-- Requirements Gathering Techniques:
-    - Overview of common techniques such as interviews, surveys, and workshops.
-    - Selecting the appropriate technique based on the nature of the project.
+- **Brainstorming**:
+    - **Process**: Gather a diverse group of people to generate a list of potential stakeholders.
+    - **Benefits**: Encourages collective input and ensures a broad perspective.
+- **Surveys and Questionnaires**:
+    - **Process**: Distribute surveys to potential users, employees, and other involved parties.
+    - **Benefits**: Collects feedback from a large audience, especially useful in large-scale projects.
+- **Interviews**:
+    - **Process**: Conduct one-on-one or group interviews with individuals representing different roles.
+    - **Benefits**: Provides in-depth insights, and allows for clarification of roles and expectations.
 
-- Types of Requirements:
-    - Distinguishing between functional and non-functional requirements.
-    - Examples and importance of each type in system design.
+#### **Importance of Understanding Stakeholder Perspectives**:
+- **Diverse Needs**: Different stakeholders may have diverse needs and expectations from the system.
+- **Conflict Resolution**: Understanding stakeholder perspectives helps in resolving conflicts and finding compromises.
+- **Holistic Design**: A comprehensive understanding of stakeholders ensures a system that meets the requirements of all involved parties.
 
-- Use Cases and User Stories:
-    - Introduction to use cases and user stories as tools for requirement elicitation.
-    - Creating effective use cases and user stories.
+### **Requirements Gathering Techniques**
 
-### Exercise | Requirements analysis
+#### **Overview**:
+*Requirements gathering is a critical step in system design, ensuring a thorough understanding of what the system needs to accomplish. Various techniques can be employed to gather requirements effectively.*
+
+#### **Common Techniques**:
+
+1. **Interviews**:
+    - **Process**: Conduct one-on-one or group interviews with stakeholders to gather information.
+    - **Benefits**: Provides detailed insights, allows for clarification, and builds a rapport with stakeholders.
+2. **Surveys and Questionnaires**:
+    - **Process**: Distribute structured surveys to a broad audience and collect responses.
+    - **Benefits**: Gathers quantitative data, useful for large-scale user feedback.
+3. **Observation**:
+    - **Process**: Observe users in their natural environment to understand how they currently perform tasks.
+    - **Benefits**: Offers insights into actual user behavior and identifies pain points.
+4. **Workshops**:
+    - **Process**: Bring together stakeholders for interactive sessions to discuss and define requirements.
+    - **Benefits**: Encourages collaboration, captures diverse perspectives, and resolves potential misunderstandings.
+5. **Prototyping**:
+    - **Process**: Create a simplified model or prototype of the system to gather feedback.
+    - **Benefits**: Allows stakeholders to interact with a tangible representation, uncovering additional requirements.
+
+#### **Choosing the Right Technique**:
+- **Nature of the Project**: The complexity and scale of the project influence the choice of technique.
+- **Time Constraints**: Some techniques, like surveys, may be quicker to implement than workshops.
+- **Accessibility of Stakeholders**: Availability and accessibility of stakeholders may determine the feasibility of certain techniques. 
+
+### **Types of Requirements**
+
+#### **Distinguishing between Functional and Non-functional Requirements**:
+- **Functional Requirements**:
+    - **Definition**: Describes what the system should do and the specific functionalities it should provide.
+    - **Examples**:
+        - Users should be able to create an account.
+        - The system should allow users to add products to their shopping cart.
+        - An admin should be able to manage user accounts.
+- Non-functional Requirements:
+    - **Definition**: Describes qualities or characteristics that the system should have, such as performance, security, and usability.
+    - **Examples**:
+        - The system should respond to user actions within 2 seconds.
+        - Data should be encrypted during transmission.
+        - The user interface should be intuitive and user-friendly.
+
+#### **Importance of Both Types**:
+- **Functional Requirements**:
+    - Define the core features and capabilities of the system.
+    - Directly contribute to the system's primary objectives.
+- **Non-functional Requirements**:
+    - Ensure the system's overall performance, security, and user experience.
+    - Provide criteria for evaluating the success of the system.
+
+### **Use Cases and User Stories**
+**Introduction**:
+*Use Cases and User Stories are powerful tools for capturing and expressing system requirements in a user-centric manner. They help in understanding how users interact with the system and the specific scenarios in which the system will be used.*
+
+#### **Use Cases**:
+- **Definition**: A use case is a description of how a user interacts with a system to accomplish a specific goal.
+- **Components**:
+    - **Actor**: A user or system that interacts with the system.
+    - **System**: The main subject under discussion.
+    - **Use Case**: Describes a specific interaction or flow of events.
+
+**Example**:
+- **Use Case**: The user makes a purchase.
+- **Actor**: Customer
+- **System**: E-commerce platform
+- **Flow**:
+    1. The customer adds items to the shopping cart.
+    2. The customer proceeds to checkout.
+    3. The customer provides shipping information.
+    4. The customer completes the purchase.
+#### **User Stories**:
+**Definition**:
+*A user story is a brief, simple description of a feature told from the perspective of the person who desires the functionality.*
+
+- **Components**:
+    - **Role**: The user or system role involved.
+    - **Action**: What the user wants to do.
+    - **Benefit**: The value or benefit the user gains.
+
+**Example**:
+- **User Story**: As a customer, I want to be able to track the delivery of my purchased items so that I know when to expect them.
+
+### Exercise | Requirement Elicitation
 
 #### **Scenario**: 
 *You are now tasked with gathering requirements for an online banking system. The system aims to provide a secure and user-friendly platform for customers to manage their accounts, transfer funds, and view transaction history.*
 
 #### **Tasks**:
 1. **Stakeholder Identification**:
-Identify and analyze stakeholders for the online banking system.
-Consider both internal (bank employees) and external (customers) stakeholders.
+    - Identify and analyze stakeholders for the online banking system.
+    - Consider both internal (bank employees) and external (customers) stakeholders.
 2. **Requirements Gathering**:
-Choose and justify a requirements-gathering technique for the online banking system.
-Provide a sample set of questions or methods you would use in an interview or survey.
+    - Choose and justify a requirements-gathering technique for the online banking system.
+    - Provide a sample set of questions or methods you would use in an interview or survey.
 3. **Types of Requirements**:
-List at least three functional and three non-functional requirements for the online banking system.
+    - List at least three functional and three non-functional requirements for the online banking system.
 4. **Use Cases and User Stories**:
-Create a use case or user story related to a fund transfer scenario in the online banking system.
+    - Create a use case or user story related to a fund transfer scenario in the online banking system.
 
 ### Solution
 
@@ -232,8 +317,4 @@ Below is the complete journey
 6. user A and user B, both get notified about the money transfer
 7. Both the users check the new account balance, also the updated transaction history.
 ---
-
-## System Architecture
-
-*Key components of system architecture, considerations for choosing the right architecture, and factors related to scalability and performance.*
 

@@ -318,3 +318,111 @@ Below is the complete journey
 7. Both the users check the new account balance, also the updated transaction history.
 ---
 
+
+## **System Architecture**
+
+### **Introduction to System Architecture**
+
+#### **Definition**: 
+***System Architecture** refers to the high-level structure of a software system, defining how different components and modules interact with each other. It outlines the organization of a system, including hardware and software components, their relationships, and how they work together to achieve the system's objectives.*
+
+#### **Importance**:
+
+1. **Blueprint for the System**: It serves as a blueprint, providing a conceptual model of the entire system.
+2. **Communication Tool**: It helps communicate the design and structure of the system to stakeholders.
+3. **Foundation for Development**: It provides the foundation for the development team to build the system.
+
+### **Key Components of System Architecture**
+
+1. **Hardware Components**:
+    - **Examples**: Servers, storage devices, and network infrastructure.
+    - **Role**: Physical components that support the execution of software.
+2. **Software Components**:
+    - **Examples**: Operating systems, middleware, databases.
+    - **Role**: Programs and applications that run on the hardware, enabling functionality.
+3. **Network Components**:
+    - **Examples**: Communication protocols, routers, and switches.
+    - **Role**: Enable communication and data exchange between different system components.
+
+### **Exercise | Designing System Architecture**
+
+#### **Scenario**:
+You are tasked with designing the system architecture for an e-commerce platform. The platform must handle a large number of concurrent users, provide fast response times, and ensure data security.
+
+#### **Tasks**:
+- **Identify Key Components**:
+    - List the key hardware, software, and network components necessary for the e-commerce platform.
+- **Choose an Architecture**:
+    - Select an architecture type (e.g., Monolithic, Microservices, Client-Server) based on the requirements of the e-commerce platform.
+    - Justify your choice with specific reasons.
+- **Scalability and Performance**:
+    - Propose strategies for ensuring scalability and high performance in the e-commerce platform's architecture.
+    - Consider load balancing, caching, and other relevant techniques.
+- **Documentation**:
+    - Create a clear and concise document outlining the chosen architecture, key components, and scalability/performance considerations.
+
+#### **Solution**:
+
+---
+- **Key Component**
+    - **Hardware**
+        1. **Server**:
+            - **Role**: Physical machines or virtual instances, where the e-commerce web app will run
+            - **Example**: Web servers, Application Server
+        2. **Storage**:
+            - **Role**: Data storage for web applications, database and file storage
+            - **Example**: Relational Database, Object storage
+    - **Software**:
+        1. **Tech Stack**:
+            - **Role**: This includes a programming language, framework and database
+            - **Example**: Nodejs, Reactjs, MongoDB
+        2. **Message Queue**:
+            - **Role**: For asynchronous communication between different components
+            - **Example: Apache Kafka for building event-driven architecture. 
+    - **Network**:
+        1. **Internal Connectivity**
+            - **Role**: Network components for internal connectivity
+            - **Example**: Router, Switches
+- **Architecture**
+    - **chosen architecture**: Microservices Architecture
+    - **justification**: 
+        1. **Scalability**: Microservices allow independent scaling for each service
+        2. **Flexibility**: Customisation for each service allows flexibility
+        3. **Fault tolerance**: An issue in one service, will not affect the other service working.
+- **Scalability and Performance**
+    - **Load balancing**: Distribute incoming network traffic on multiple servers to ensure optimal use of resources.
+    - **Caching**: Use a cache system, to avoid extra load on the database.
+    - **Asynchronous Processing**: Use message queues for asynchronous processing of tasks to improve system responsiveness
+- **Documentation**:
+    - **System Architecture Document**
+        - **Overview**: Design a complete working E-commerce website. Users must be able to add a product and buy it.
+    - **Key Component**
+        - **Hardware**
+            1. **Server**:
+                - **Role**: Physical machines or virtual instances, where the e-commerce web app will run
+                - **Example**: Web servers, Application Server
+            2. **Storage**:
+                - **Role**: Data storage for web applications, database and file storage
+                - **Example**: Relational Database, Object storage
+        - **Software**:
+            1. **Tech Stack**:
+                - **Role**: This includes a programming language, framework and database
+                - **Example**: Nodejs, Reactjs, MongoDB
+            2. **Message Queue**:
+                - **Role**: For asynchronous communication between different components
+                - **Example: Apache Kafka for building event-driven architecture. 
+        - **Network**:
+            1. **Internal Connectivity**
+                - **Role**: Network components for internal connectivity
+                - **Example**: Router, Switches
+    - **Architecture**
+        - **chosen architecture**: Microservices Architecture
+        - **justification**: 
+            1. **Scalability**: Microservices allow independent scaling for each service
+            2. **Flexibility**: Customisation for each service allows flexibility
+            3. **Fault tolerance**: An issue in one service, will not affect the other service working.
+    - **Scalability and Performance**
+        - **Load balancing**: Distribute incoming network traffic on multiple servers to ensure optimal use of resources.
+        - **Caching**: Use a cache system, to avoid extra load on the database.
+        - **Asynchronous Processing**: Use message queues for asynchronous processing of tasks to improve system responsiveness
+---

@@ -549,3 +549,79 @@ You are tasked with designing the database for the e-commerce platform discussed
 - **Normalization**
     - Already in Normalized form
 ---
+
+## **Security in System Design**
+
+### **Importance of Security in System Design**
+
+*Security is a critical aspect of system design, protecting against potential threats and ensuring the confidentiality, integrity, and availability of data.*
+
+#### **CIA | Confidentiality, Integrity, Availability**
+- **Confidentiality**:
+Protecting sensitive information from unauthorized access.
+- **Integrity**:
+Ensuring that data remains accurate and unaltered.
+- **Availability**:
+Guaranteeing that the system and its resources are available when needed.
+
+### **Key Concepts in System Security**
+
+#### **Authentication**
+*Authentication is the process of verifying the identity of a user, system, or device.*
+
+- **Methods**:
+    - **Passwords**: Traditional but should be strong and secure.
+    - **Biometrics**: Fingerprint, facial recognition.
+    - **Two-Factor Authentication (2FA)**: Adds an extra layer of security.
+
+#### **Authorization**
+*Authorization is the granting of access rights to authenticated users based on their roles and permissions.*
+
+- **Implementation**:
+    - **Role-based Access Control (RBAC)**: Assigns permissions based on user roles.
+    - **Access Control Lists (ACLs)**: Lists specifying user permissions for specific resources.
+
+#### **Encryption**:
+*Encryption involves converting data into a secure format to prevent unauthorized access.*
+
+- **Types**:
+    - **Symmetric Encryption**: Uses a single key for both encryption and decryption.
+    - **Asymmetric Encryption**: Utilizes a pair of public and private keys.
+
+### **Exercise | Security in System Design**
+
+#### **Scenario**:
+
+*Enhance the security of the e-commerce platform by identifying potential security threats and proposing measures to mitigate risks.*
+
+#### **Tasks**:
+
+- **Identify Security Threats**:
+    - List potential security threats (e.g., unauthorized access, data breaches).
+- **Authentication Measures**:
+    - Propose authentication methods to ensure only legitimate users access the system.
+- **Authorization Strategies**:
+    - Define authorization strategies to control access rights based on user roles.
+- **Encryption Techniques**:
+    - Specify encryption techniques to secure sensitive data during transmission and storage.
+
+### **Solution**
+
+---
+- **Security Threats**:
+    - Unauthorized access to the database will cause
+        - order data issue
+        - aggregator data issue
+        - product pricing issue
+        - cod limit issue
+    - Data breach to the database will cause
+        - leak of private information about users 
+        - leak of aggregator credentials
+        - leak of orders made by the customer
+- **Authentication Measures**:
+    - Access to the database must be password-protected
+- **Authorization Strategies**:
+    - Read and Write access must be maintained via RBAC and ACLs
+- **Encryption Techniques**:
+    - user data and aggregator data must be encrypted to avoid issues in case of a data breach
+---

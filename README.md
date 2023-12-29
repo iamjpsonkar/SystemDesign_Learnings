@@ -700,9 +700,9 @@ Guaranteeing that the system and its resources are available when needed.
     - **Hash-Based Sharding**: Distributes data across shards using a hash function.
 
 - **Database sharding in Depth**
-- **Dynamic Sharding**: Instead of static sharding, exploring dynamic sharding strategies where the system adapts to changing data patterns. This might involve automated tools that analyze data distribution and adjust sharding configurations accordingly.
+    - **Dynamic Sharding**: Instead of static sharding, exploring dynamic sharding strategies where the system adapts to changing data patterns. This might involve automated tools that analyze data distribution and adjust sharding configurations accordingly.
 
-- **Transparent Sharding**: Understanding how transparent sharding allows the application to interact with the database without explicit knowledge of sharding. This involves a layer that manages the distribution of data across shards without impacting the application's logic.
+    - **Transparent Sharding**: Understanding how transparent sharding allows the application to interact with the database without explicit knowledge of sharding. This involves a layer that manages the distribution of data across shards without impacting the application's logic.
 
 - **Database Sharding Plan**:
     - **Automated Sharding**: Going deeper into automated sharding tools and their role in maintaining optimal data distribution. Automated sharding involves not only initial configuration but also continuous monitoring and adjustment based on evolving data patterns.

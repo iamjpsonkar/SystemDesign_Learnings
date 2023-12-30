@@ -1,6 +1,6 @@
 # **System Design**
 
-## Overview of System Design
+## **Overview of System Design**
 
 ### **What is System Design?**
 **System design** is the process of defining the architecture, components, modules, interfaces, and data for a system to satisfy specified requirements. It's a crucial phase in software development that focuses on how the system will fulfill the needs and requirements identified during the analysis phase.
@@ -36,6 +36,92 @@ System design is a crucial phase in the software development life cycle. It invo
 - **Simplicity**: 
     - **Definition**: Striving for simplicity in design without compromising functionality.
     - **Advantages**: Simplicity aids in understanding, and maintenance, and reduces the chances of errors.
+
+#### **SOLID Principle**
+*The SOLID principles are a set of five design principles for writing maintainable and scalable software. These principles were introduced by Robert C. Martin and are widely used in object-oriented programming.*
+
+The SOLID acronym represents the following principles:
+- **Single Responsibility Principle (SRP)**:
+    - **Principle**: A class should have only one reason to change, meaning it should have only one responsibility.
+   - **Explanation**: This principle encourages the design of classes that have a clear and focused purpose. Each class should encapsulate only one aspect of the overall functionality, making the code more modular and easier to maintain.
+
+- **Open/Closed Principle (OCP)**:
+   - **Principle**: Software entities (classes, modules, functions, etc.) should be open for extension but closed for modification.
+   - **Explanation**: This principle promotes the idea that you should be able to add new functionality to a system without altering the existing code. This is often achieved through the use of interfaces and abstract classes, allowing for extension through new implementations.
+
+- **Liskov Substitution Principle (LSP)**:
+   - **Principle**: Objects of a superclass should be replaceable with objects of a subclass without affecting the correctness of the program.
+   - **Explanation**: This principle ensures that subtypes can be used interchangeably with their base types without causing errors. It emphasizes the importance of maintaining the expected behavior when substituting one class for another.
+
+- **Interface Segregation Principle (ISP)**:
+   - **Principle**: A class should not be forced to implement interfaces it does not use.
+   - **Explanation**: This principle advocates for the creation of small, specific interfaces rather than large, general-purpose ones. Clients should not be forced to depend on interfaces they do not use, reducing the impact of changes to the system.
+
+- **Dependency Inversion Principle (DIP):**
+   - **Principle**: High-level modules should not depend on low-level modules. Both should depend on abstractions. Abstractions should not depend on details; details should depend on abstractions.
+   - **Explanation**: This principle encourages the use of abstractions (interfaces or abstract classes) to decouple high-level modules from low-level implementations. It promotes flexibility and ease of maintenance by minimizing the impact of changes in the implementation details.
+
+#### **Separation of Concerns (SoC)**
+*The principle of Separation of Concerns (SoC) is a fundamental concept in software design that promotes dividing a computer program into distinct sections, each addressing a separate concern. The goal is to create a modular and maintainable system by isolating different aspects of the software, making it easier to understand, develop, and maintain.*
+
+The key concerns often separated in software design include
+
+- **Presentation Concern**:
+    - **Responsibility**: Handling the user interface and user interactions.
+    - **Example**: HTML, CSS, front-end JavaScript code.
+- **Business Logic Concern**:
+    - **Responsibility**: Implementing the core functionality or business rules of the application.
+    - **Example**: Classes and methods responsible for processing data, enforcing rules, and making decisions.
+- **Data Access Concern**:
+    - **Responsibility**: Managing the interaction with the data storage, such as databases or external APIs.
+    - **Example**: Database queries, data retrieval, and storage operations.
+- **Infrastructure Concern**:
+    - **Responsibility**: Dealing with system-level concerns like logging, configuration, and external services.
+    - **Examples**: Logging mechanisms, configuration management, and third-party integrations.
+    
+*By separating these concerns, the codebase becomes more modular, and changes in one area are less likely to affect others. This separation enhances the maintainability, reusability, and testability of the software. Developers can work on specific concerns without needing to understand the entire system, leading to more efficient collaboration.*
+
+**Key benefits of Separation of Concerns**:
+
+- **Maintainability**: Changes to one concern do not affect others, making it easier to modify and extend the system.
+
+- **Reusability**: Components that handle specific concerns can be reused in different parts of the application or other projects.
+
+- **Testability**: Isolated concerns are easier to test independently, facilitating the development of unit tests and ensuring the correctness of individual components.
+
+- **Understandability**: Code becomes more readable and comprehensible as each module or class has a clear and distinct purpose.
+
+*Practical techniques for achieving Separation of Concerns include using design patterns (such as MVC - Model-View-Controller), modular programming, and employing abstraction mechanisms like interfaces or abstract classes.*
+
+### **Design Pattern**
+*Design patterns are general, reusable solutions to common problems encountered in software design. They represent best practices evolved by experienced software developers. Using design patterns can speed up the development process, improve code organization, and make software systems more scalable and maintainable.*
+
+Here are some commonly used design patterns:
+
+#### **Creational Patterns**:
+- **Singleton Pattern**: *Ensures that a class has only one instance and provides a global point of access to it.*
+- **Factory Method Pattern**: *Defines an interface for creating an object but leaves the choice of its type to the subclasses, creating an instance of the appropriate subclass.*
+- **Abstract Factory Pattern**: *Provides an interface for creating families of related or dependent objects without specifying their concrete classes.*
+- **Builder Pattern**: *Separates the construction of a complex object from its representation, allowing the same construction process to create different representations.*
+- **Prototype Pattern**: *Creates new objects by copying an existing object, known as the prototype.*
+
+#### **Structural Patterns**:
+- **Adapter Pattern**: *Allows the interface of an existing class to be used as another interface.*
+- **Bridge Pattern**: *Separates abstraction from implementation so that the two can vary independently.*
+- **Composite Pattern**: *Composes objects into tree structures to represent part-whole hierarchies.*
+- **Decorator Pattern**: *Attaches additional responsibilities to an object dynamically. Decorators provide a flexible alternative to subclassing for extending functionality.*
+- **Facade Pattern**: *Provides a simplified interface to a set of interfaces in a subsystem, making it easier to use.*
+- **Flyweight Pattern**: *Minimizes memory usage or computational expenses by sharing as much as possible with related objects.*
+
+#### **Behavioral Patterns**:
+- **Observer Pattern**: *Defines a one-to-many dependency between objects so that when one object changes state, all its dependents are notified and updated automatically.*
+- **Strategy Pattern**: *Defines a family of algorithms, encapsulates each algorithm, and makes them interchangeable. Strategy lets the algorithm vary independently from clients that use it.*
+- **Command Pattern**: *Encapsulates a request as an object, thereby allowing for parameterization of clients with different requests, queuing of requests, and logging of the requests.*
+- **Chain of Responsibility Pattern**: *Passes the request along a chain of handlers. Upon receiving a request, each handler decides either to process the request or to pass it to the next handler in the chain.*
+- **State Pattern**: *Allows an object to alter its behavior when its internal state changes. The object will appear to change its class.*
+- **Visitor Pattern**: *Represents an operation to be performed on the elements of an object structure. Allows the definition of a new operation without changing the classes of the elements on which it operates.*
+
+*These design patterns provide solutions to common design problems and can be adapted to various scenarios in software development. It's important to choose the appropriate pattern based on the specific requirements and constraints of the project.*
 
 ### **Different Approaches to System Design**
 
@@ -144,9 +230,52 @@ Common Traits in Well-Designed Systems:
 2. the seller must have added some products in the web app, to get the desired result.
 ---
 
-## Understanding System Requirements
+## **Understanding System Requirements**
 
-### Requirements analysis
+### **Architectural patterns**
+*Architectural patterns in system design provide reusable solutions to common problems faced during the design and implementation of software systems. These patterns help structure and organize the code, making it more scalable, maintainable, and adaptable to changes.*
+
+#### **Layered Architecture**:
+- **Description**: *Divide the system into logical layers (e.g., presentation, business logic, data) with each layer responsible for a specific set of tasks.*
+- **Advantages**: *Separation of concerns, modular design, and ease of maintenance.*
+
+#### **Microservices Architecture**:
+- **Description**: *Decomposes the system into small, independent services that communicate through APIs.*
+- **Advantages**: *Scalability, independent deployment, technology diversity, and fault isolation.*
+
+#### **Monolithic Architecture**:
+- **Description**: *All components of the system are tightly integrated into a single codebase and deployed as a single unit.*
+- **Advantages**: *Simplicity, easier to develop and test.*
+
+#### **Event-Driven Architecture**:
+- **Description**: *Components communicate through events, allowing for loose coupling and asynchronous communication.*
+- **Advantages**: *Scalability, responsiveness, and adaptability to changes.*
+
+#### **Service-Oriented Architecture (SOA)**:
+- **Description**: *Organizes the system as a collection of services, each offering a specific business functionality.*
+- **Advantages**: *Reusability, interoperability, and modularity.*
+
+#### **Model-View-Controller (MVC)**:
+- **Description**: *Separates the application into three interconnected components: Model (data and business logic), View (presentation layer), and Controller (handles user input).*
+- **Advantages**: *Separation of concerns, maintainability, and reusability.*
+
+#### **Repository Pattern**:
+- **Description**: *Centralizes data access logic, providing a way to access data without exposing the underlying data store details.*
+- **Advantages**: *Abstraction of data access, testability, and flexibility in choosing data storage technologies.*
+
+#### **Proxy Pattern**:
+- **Description**: *Provides a surrogate or placeholder for another object to control access or add functionality.*
+- **Advantages**: *Controlled access, logging, and caching.*
+
+#### **Publish-Subscribe Pattern**:
+- **Description**: *Defines a one-to-many dependency between objects, where a change in one object triggers updates to all its dependents.
+- **Advantages**: Loose coupling, and dynamic event handling.*
+
+#### **Dependency Injection**:
+- **Description**: *Inverts the control of object creation and allows the creation of dependent objects to be moved outside the class that depends on them.*
+- **Advantages**: *Testability, flexibility, and modularity.*
+
+### **Requirements analysis**
 **Requirements analysis** is a critical phase in system design, and a thorough understanding of stakeholder needs is essential for a successful design.
 
 ### **Stakeholder Identification and Analysis**
@@ -294,7 +423,7 @@ Common Traits in Well-Designed Systems:
     - viewing the transaction history
     - fund transfer to another bank account
     - new account creation
-3. Security, use encryption and https
+3. Security, use encryption and HTTPS
 
 **Requirements**
 
@@ -549,6 +678,45 @@ You are tasked with designing the database for the e-commerce platform discussed
 - **Normalization**
     - Already in Normalized form
 ---
+
+## **RESTful APIs (Representational State Transfer)**
+*RESTful APIs are a set of principles and constraints that guide the design of web services. Following these principles helps in creating scalable, maintainable, and interoperable APIs.*
+
+Here are the key RESTful API principles and best practices:
+
+### **RESTful API Principles**:
+- **Resource-Based**:
+    - **Principle**: Resources are the key abstractions in a RESTful API. They should be identified by URIs, and clients can interact with them using standard HTTP methods (GET, POST, PUT, DELETE).
+- **Uniform Interface**:
+    - **Principle**: A uniform and consistent interface simplifies communication between clients and servers. It includes four constraints:
+        - **Identification of Resources**: Resources are uniquely identified using URIs.
+        - **Manipulation of Resources through Representations**: Clients interact with resources through representations, such as JSON or XML.
+        - **Self-Descriptive Messages**: Each message from the server includes information about how to process it.
+        - **Hypermedia as the Engine of Application State (HATEOAS)**: The server provides links dynamically to guide the client through the application.
+- **Stateless**:
+    - **Principle**: Each request from a client contains all the information the server needs to fulfill the request. The server does not store any client state between requests.
+- **Client-Server Architecture**:
+    - **Principle**: The client and server are separate entities that communicate over a stateless protocol (usually HTTP). This separation allows them to evolve independently.
+- **Cacheability**:
+    - **Principle**: Responses from the server can be marked as cacheable or non-cacheable. This improves performance by allowing clients to cache responses.
+- **Layered System**:
+    - **Principle**: The architecture can be composed of multiple layers, where each layer has a specific responsibility. Layers can be added, removed, or modified without affecting the system as a whole.
+
+### **RESTful API Best Practices**:
+- **Use Nouns for Resource Names**: *Choose resource names that are nouns and represent the entities in your system. For example, use "/users" to represent a collection of users.*
+- **Use Plural Nouns for Collection Resources**: *For resource collections, use plural nouns to represent the collection. For example, "/products" for a collection of products.*
+- **Use HTTP Methods Appropriately**: *Use HTTP methods (GET, POST, PUT, DELETE) according to their semantics. For example, use GET for retrieving resources, POST for creating resources, PUT for updating resources, and DELETE for deleting resources.*
+- **Versioning**: *Consider versioning your API to provide backward compatibility as your API evolves. Use version numbers in the URI or headers.*
+- **Filtering, Sorting, and Pagination**: *Provide mechanisms for clients to filter, sort, and paginate results to improve efficiency and usability.*
+- **Consistent Endpoint Naming**: *Maintain consistency in your endpoint naming conventions. Similar resources and operations should have similar naming patterns.*
+- **Use HTTP Status Codes**: *Use appropriate HTTP status codes to indicate the success or failure of a request. For example, use 200 OK for successful requests, 404 Not Found for not found resources, and 201 Created for successful resource creation.*
+- **Provide Error Handling**: *Include detailed error messages in the response to help clients diagnose issues. Use standard error formats like JSON API or Problem Details for HTTP APIs.*
+- **Security**: *Implement secure practices, including authentication and authorization mechanisms. Use HTTPS to encrypt data in transit.*
+- **Documentation**: *Provide clear and comprehensive documentation for your API, including information on available endpoints, request and response formats, and examples.*
+- **Rate Limiting**: *Implement rate limiting to prevent abuse and ensure fair usage of your API resources.*
+- **Testing and Monitoring**: *Regularly test your API, and implement monitoring to track usage patterns and identify potential issues.*
+
+*By adhering to these RESTful API principles and best practices, you can create APIs that are scalable, maintainable, and easy for developers to work with.*
 
 ## **Security in System Design**
 
@@ -922,4 +1090,3 @@ Guaranteeing that the system and its resources are available when needed.
     - **Virtual Private Cloud (VPC)**: Using VPCs to isolate resources and control network traffic. VPCs provide a secure and isolated environment within the cloud infrastructure.
 
     - **Security Groups and Network ACLs**: Configuring security groups and network ACLs to control inbound and outbound traffic. These measures enhance the security posture of cloud-native applications.
-

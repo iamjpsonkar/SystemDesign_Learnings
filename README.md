@@ -1447,3 +1447,145 @@ Successful implementation of DevOps and CI/CD involves:
 - **Security Training and Certifications**: Encouraging continuous learning through security-related training and certifications.
 
 - **Participation in Security Communities**: Involvement in security communities for knowledge sharing and staying informed about industry best practices.
+
+
+## **System Design | Practical Approach**
+
+### **Types of Entities**
+
+- **Logical Entity**
+    - **Components or Modules**: These are the functional units or building blocks of the system. Each component/module performs a specific set of tasks or functions. For example, in a banking system, you might have components for customer management, account management, and transaction processing.
+
+    - **Data Models**: Logical entities also include the data structures and models used by the system. This involves defining the types of data the system will handle, the relationships between data elements, and the operations that can be performed on the data.
+
+    - **Interfaces**: Logical entities encompass the interactions between various system components. Interfaces define how different modules or components communicate with each other. This can include method calls, message passing, or other communication protocols.
+
+    - **Business Rules**: Logical entities also encapsulate the business rules or logic that govern how the system operates. For instance, in a retail system, there might be business rules for calculating discounts, handling returns, or managing inventory.
+
+- **Tangible Entity**
+    - **Hardware Components**: Tangible entities include the physical components of the system, such as servers, storage devices, networking equipment, and other hardware elements.
+
+    - **Software Components**: These are the actual programs or applications that run on the hardware. Tangible software entities include the executable code, libraries, and frameworks that make up the system.
+
+    - **Data Storage**: Tangible entities also involve the physical storage of data. This can include databases, file systems, and other storage mechanisms.
+
+    - **User Interfaces**: Tangible entities encompass the user interfaces through which users interact with the system. This can include graphical user interfaces (GUIs), command-line interfaces, or application programming interfaces (APIs).
+
+### **Client-Server Architecture**
+
+*Client-server architecture is a network architecture in which a client, typically a user's machine, makes requests and a server, which hosts resources, processes these requests. This model is widely used in distributed computing and network-based applications.*
+
+Here are the key components and characteristics of client-server architecture:
+
+#### **Client**:
+
+- **Definition**: *The client is the end-user device or application that requests services or resources from the server.*
+- **Functionality**: *Clients send requests to the server for specific tasks or data.*
+- **Types**: *Clients can vary in complexity and functionality. Examples include web browsers, mobile apps, desktop applications, and more.*
+
+##### **Thick Client**:
+- Also known as "Fat Client" or "Rich Client."
+- In a thick client architecture, a significant portion of the application's processing logic and user interface resides on the client side (end-user device).
+- The client is responsible for a substantial part of the application's functionality, data processing, and presentation.
+- Thick clients often require more resources (memory, processing power) on the user's device.
+- Examples of thick clients include traditional desktop applications and some mobile apps that store a significant part of the application logic locally.
+
+
+##### **Thin Client**:
+- In a thin client architecture, the client side is minimized, and most of the application's processing logic and data management occurs on the server.
+- The client's primary role is to display the user interface and handle user input. It relies heavily on the server for processing and data storage.
+- Thin clients typically require fewer resources on the user's device because much of the application's heavy lifting is done on the server.
+- Web browsers are a common example of thin clients, especially in web-based applications where the server handles most of the processing, and the browser renders the user interface.
+
+- **Server**:
+    - **Definition**: The server is a dedicated machine or software application that provides services or resources to clients.
+    - **Functionality**: Servers process client requests, perform the necessary operations, and send back the results or data.
+    - **Types**: Servers can be specialized for specific purposes, such as web servers, database servers, file servers, and application servers.
+
+- **Communication**:
+    - **Request-Response Model**: Clients send requests to servers, and servers respond to these requests with the requested data or services.
+    - **Protocols**: Communication between clients and servers often relies on standardized protocols like HTTP, HTTPS, FTP, or custom protocols depending on the application.
+
+### **2-Tier Architecture**:
+- Also known as "Client-Server" architecture.
+- In a 2-tier architecture, the application is divided into two main components: the client (front end) and the server (back end).
+- The client is responsible for the user interface and application logic, while the server handles the database and business logic.
+- Communication primarily occurs between the client and the server.
+
+### **3-Tier Architecture**:
+- In a 3-tier architecture, the application is divided into three main components: the presentation layer (client), the application layer (server), and the data layer (database).
+- The presentation layer is responsible for the user interface, the application layer handles business logic, and the data layer manages data storage and retrieval.
+- Communication flows between the client, the application server, and the database server.
+
+### **N-Tier Architecture**:
+- N-tier architecture is a generalized term that represents any architecture with more than three tiers. It could be 4-tier, 5-tier, and so on, depending on the complexity of the application.
+- In an N-tier architecture, additional tiers may be introduced for various purposes, such as security, scalability, or specific functionalities.
+- Each tier represents a logical separation of concerns, and communication flows between the tiers based on the specific architecture.
+
+### **Proxies**
+*Proxies play a significant role in system design by acting as intermediaries between clients and servers. They are used to improve performance, security, and accessibility in various ways.*
+
+Here are some common use cases of proxies in system design:
+
+#### **Load Balancing**:
+- **Description**: Load balancer proxies distribute incoming network traffic across multiple servers to ensure that no single server is overwhelmed.
+- **Benefits**: Improved scalability, availability, and reliability by distributing the load efficiently.
+
+#### **Caching Proxies**:
+- **Description**: Proxies can cache frequently requested content or data, reducing the need to fetch it from the original server repeatedly.
+- **Benefits**: Faster response times, reduced server load, and bandwidth savings, especially for static or infrequently changing content.
+
+#### **Reverse Proxies**:
+- **Description**: A reverse proxy sits between client devices and a server, forwarding client requests to the server and returning the server's responses to the clients.
+- **Benefits**: Enhances security by hiding the internal structure of the server, load balancing, caching, and providing additional features like SSL termination.
+
+#### **Security Proxies**:
+- **Description**: Proxies can be used to inspect and filter network traffic for security purposes, such as firewalls, intrusion detection systems (IDS), or web application firewalls (WAF).
+- **Benefits**: Improved security by monitoring and controlling the flow of traffic, protecting against malicious activities.
+
+#### **Content Filtering Proxies**:
+- **Description**: Proxies can be employed to filter and control access to content based on predefined policies, such as blocking certain websites or types of content.
+- **Benefits**: Enhanced control over the content accessed by users, improved security, and compliance with organizational policies.
+
+#### **Gateway Proxies**:
+
+**Description**: Proxies can serve as gateways between different networks or protocols, translating requests and responses as needed.
+**Benefits**: Integration of diverse systems, communication between different network protocols, and improved interoperability.
+
+#### **API Gateways**:
+- **Description**: Proxies can act as API gateways, providing a unified entry point for multiple microservices or APIs.
+- **Benefits**: Centralized management of APIs, authentication, authorization, logging, and monitoring.
+
+#### **Compression Proxies**:
+- **Description**: Proxies can compress outgoing data before sending it to the client, reducing bandwidth usage and improving performance.
+- **Benefits**: Faster data transfer, reduced latency, and improved user experience, especially in bandwidth-constrained environments.
+
+#### **Forward Proxies**:
+- **Description**: Forward proxies sit between client devices and the internet, forwarding client requests to external servers.
+- **Benefits**: Anonymity, content filtering, and caching for client devices accessing external resources.
+
+*The use of proxies in system design provides flexibility, scalability, and improved performance while addressing various system requirements. The specific proxy types employed depend on the goals and constraints of the system being designed.*
+
+### **Database and their types**
+*Databases are structured collections of data that are organized in a way that facilitates efficient storage, retrieval, and management of data. There are various types of databases, each designed for specific use cases and requirements.*
+
+Here are some common types of databases:
+
+#### **Relational Databases (RDBMS)**:
+- **Description**: Relational databases organize data into tables with rows and columns. They use a schema to define the structure of the data.
+- **Key Characteristics**:
+    - Tables with relationships between them.
+    - SQL (Structured Query Language) for querying and manipulating data.
+    - ACID properties (Atomicity, Consistency, Isolation, Durability) to ensure data integrity.
+- **Examples**: MySQL, PostgreSQL, Oracle Database, Microsoft SQL Server.
+
+
+#### **NoSQL Databases**:
+
+- **Description**: NoSQL databases are designed to handle unstructured or semi-structured data. They provide flexible schemas and are suitable for scalable and distributed environments.
+- **Key Characteristics**:
+    - Dynamic schema.
+    - Support for horizontal scaling.
+    - Various data models, including document-oriented, key-value, wide-column store, and graph databases.
+- **Examples**: MongoDB (document-oriented), Cassandra (wide-column store), Redis (key-value)
+

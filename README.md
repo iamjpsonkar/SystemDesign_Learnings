@@ -1589,3 +1589,130 @@ Here are some common types of databases:
     - Various data models, including document-oriented, key-value, wide-column store, and graph databases.
 - **Examples**: MongoDB (document-oriented), Cassandra (wide-column store), Redis (key-value)
 
+## **Interview Prep**
+
+### Caching Solution:
+- Redis
+
+### File storage | Image/Video
+- Blob Storage | amazon s3
+- Content Delivery Network (CDN): Distribute the stored blob based on geographical location
+
+### Text Search Engine | product, movie, location search
+- Elastic Search | Solr
+- fuzzy search | wrong spelling of the searched word
+- maybe data loss
+
+### Metric tracking system 
+- no random data accessed
+- time-series | open time series database Open TSDB
+
+### analytics | data dump
+- Dataware House | Hadoop
+
+### Selecting RDBMS 
+- Structured Data
+    - Yes 
+        - Need ACID
+            - Atomicity
+            - Consistency
+            - Isolation
+            - Durability
+        - MySQL, Oracle, SQL Server, Postgres
+    - No
+        - Document Based DB | Catalogue
+            - MongoDB, Couch Base
+        - Ever Increasing Data
+            - Uber | continues data update
+            - Columnar DB
+            - Cassandra, HBase
+
+### System Design
+
+- Requirement Analysis
+    - Functional Requirements
+    - Non-Functional Requirements
+- Potential Issues
+- Designing | Discussion | assumptions
+    - FR1
+    - FR2
+    - FR3
+- Infrastructure Discussion
+    - NFR1
+    - NFR2
+    - NFR3
+- Flow Diagram
+
+#### Google Map System Design
+
+- Requirement Analysis
+    - Functional Requirements
+        - Identify Roads, Routes
+            - Use Government Sources
+            - Use the user's travel data, to identify the roads/routes
+        - Distance, ETA b/w 2 Points
+        - Plugable | Easily addition of traffic, construction, etc.
+    - Non-Functional Requirements
+        - High Availability
+        - Good Accuracy
+        - Not too slow
+        - Scale
+            - 1 Billion Monthly Active Users MAUs
+            - 5 Billion Monthly Active Users MAUs
+
+- Potential Issues
+    - No proper location for this huge amount of data about the road/routes
+    - Multiple reasons that can change ETA b/w 2 points
+
+- Designing | Discussion | assumptions
+    - FR: Finding Shortest Route
+        - Divide the whole area into smaller sections 1Km*1Km, segment
+        - Each segment will store the exit point for that segment
+        - use X, and Y coordinates to find the location of the current user
+        - Every road has a weight | time to cross the road
+        - Directed Graph, (length, time taken)
+        - Use Dijkstra, Bellman-Ford algorithm to find the shortest path
+        - store the calculated shortest path, In DB
+        - ask for the segment, as there are multiple routes, so the algorithm will not be optimal, so we set a buffer that will check only for 20 segments, if not reached, then change the route
+        - recombine smaller segments, and create a mega-segment, for a large area
+    - FR: Distance, ETA b/w 2 Points
+        - Edges, and weights
+            - Distance
+            - ETA
+            - Avg. Speed
+    - FR: Plugable | Easily addition of traffic, construction, etc.
+        - Traffic, weather, all these will not be part of edge, weight
+        - These will be the factors that will change
+            - avg. speed
+        - Traffic
+            - low
+            - medium
+            - high
+            - going from low to medium, the average speed was reduced by 20%
+        - Weather
+            - good
+            - bad
+            - going from good to bad, the average speed was reduced by 60%
+        - Use historical data for ETA, Sunday ETA
+        - traffic detection, average speed reduces by more than 60%
+- Infrastructure Discussion
+    - For High Availability, use load balancers, and Fast DBs
+    - For Good Accuracy, Will Use AI/ML and Algorithms
+    - Not too slow | Continuous update latency 2 sec
+    - Scale | Use Kafka and DBs
+
+
+- Flow Diagram
+<img src="./flowdiagrams/GoogleMapSystemDesignFlow.png" alt="GoogleMapSystemDesignFlow.png"/>
+
+
+
+
+
+
+
+
+
+
+
+

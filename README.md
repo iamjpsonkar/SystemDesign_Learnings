@@ -879,3 +879,47 @@ Guaranteeing that the system and its resources are available when needed.
 
     - **Scalability Assessment**: Assessing the system's scalability by analyzing how it handles increased loads and identifying areas for improvement.
 
+## **Cloud-Native Architecture**
+
+### **Fundamentals of Cloud-Native Architecture**
+**Significance**: *Understanding the fundamentals of cloud-native architecture is crucial for leveraging cloud services effectively*
+
+- **Microservices in the Cloud**:
+    - **Containerization**: Utilizing containers (e.g., Docker) for packaging and deploying microservices. Containers provide consistency across different environments and simplify deployment.
+
+    - **Orchestration**: Implementing orchestration tools (e.g., Kubernetes) to automate the deployment, scaling, and management of containerized applications. Orchestration enhances efficiency and ensures high availability.
+
+- **Serverless Computing**:
+    - **Event-Driven Execution**: Embracing serverless computing for event-driven execution. Functions as a Service (FaaS) platforms (e.g., AWS Lambda) allow running code in response to events, eliminating the need for traditional server management.
+
+    - **Scalability and Cost Optimization**: Leveraging serverless computing for automatic scalability and cost optimization. Paying only for the actual compute resources consumed during execution.
+
+### **Cloud-Native Best Practices**
+
+**Significance**:
+*Adopting cloud-native best practices is essential for building resilient and scalable systems*
+
+- **Decentralized Data Management**:
+    - **Distributed Databases**: Implementing distributed databases for decentralized data management. This approach ensures data availability and resilience even if individual components fail.
+
+    - **Data Caching**: Utilizing caching mechanisms (e.g., Redis) to enhance data retrieval performance and reduce the load on backend services.
+
+- **Resilience and Fault Tolerance**:
+    - **Chaos Engineering**: Embracing chaos engineering principles to proactively identify system weaknesses. Simulating failures allows an understanding of how the system behaves under adverse conditions.
+
+    - **Automated Recovery**: Implementing automated recovery mechanisms to minimize downtime. Strategies include automatic scaling, rolling updates, and self-healing systems.
+
+### **Cloud-Native Security**
+
+**Significance**: *Ensuring cloud-native security is paramount for protecting data and maintaining system integrity*
+
+- **Identity and Access Management (IAM)**:
+    - **Role-Based Access Control (RBAC)**: Implementing RBAC for fine-grained access control. Assigning permissions based on roles ensures that users have the necessary access without unnecessary privileges.
+
+    - **Multi-Factor Authentication (MFA)**: Enforcing MFA to add an extra layer of security. Authenticating users through multiple factors reduces the risk of unauthorized access.
+
+- **Network Security**:
+    - **Virtual Private Cloud (VPC)**: Using VPCs to isolate resources and control network traffic. VPCs provide a secure and isolated environment within the cloud infrastructure.
+
+    - **Security Groups and Network ACLs**: Configuring security groups and network ACLs to control inbound and outbound traffic. These measures enhance the security posture of cloud-native applications.
+

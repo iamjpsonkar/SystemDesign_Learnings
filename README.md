@@ -1589,6 +1589,40 @@ Here are some common types of databases:
     - Various data models, including document-oriented, key-value, wide-column store, and graph databases.
 - **Examples**: MongoDB (document-oriented), Cassandra (wide-column store), Redis (key-value)
 
+
+## **Kafka**
+*Apache Kafka is an open-source distributed streaming platform designed to handle real-time data feeds and event streams. Developed by the Apache Software Foundation, Kafka is widely used for building scalable and fault-tolerant systems for data streaming and event-driven architectures.*
+
+Here are key aspects of Kafka:
+
+- **Publish-Subscribe Model**: *Kafka follows a publish-subscribe messaging paradigm. Producers publish messages to topics, and consumers subscribe to these topics to receive the messages.*
+
+- **Topics**: *Topics in Kafka represent categories or feeds to which messages are published. Producers publish messages to topics, and consumers subscribe to topics to consume the messages.*
+
+- **Partitions**: *Each topic is divided into partitions, which allow for parallelism and scalability. Partitions enable multiple consumers to process messages concurrently.*
+
+- **Brokers**: *Kafka operates as a distributed system with multiple servers called brokers. Each broker is responsible for managing partitions, storing data, and serving clients.*
+
+- **Producers**: *Producers are applications or systems that publish messages to Kafka topics. They send data to specific topics, and Kafka ensures that the data is distributed across partitions.*
+
+- **Consumers**: *Consumers are applications or systems that subscribe to topics and process the messages. Consumers can be part of a consumer group, allowing for parallel processing and load balancing.*
+
+- **Consumer Groups**: *Consumer groups enable parallel processing of messages by allowing multiple consumers to work together. Each partition is consumed by only one consumer within a consumer group, ensuring that all messages in a partition are processed in order.*
+
+- **Replication**: *Kafka supports data replication for fault tolerance. Each partition can have multiple replicas distributed across different brokers. If a broker fails, another replica can take over to ensure data availability.*
+
+- **Retention**: *Kafka retains messages for a configurable period. This allows consumers to catch up on messages even if they are offline for a certain period.*
+
+- **Log-Structured Storage**: *Kafka stores messages in a log-structured format on disk. This design provides efficient and sequential read and write access to messages.*
+
+- **Scalability**: *Kafka is designed for horizontal scalability. Additional brokers can be added to a Kafka cluster to handle increased data throughput.*
+
+- **Use Cases**: *Kafka is used in various scenarios, including real-time event streaming, log aggregation, monitoring, data integration, and building event-driven architectures.*
+
+- **Ecosystem**: *Kafka has a rich ecosystem of connectors, tools, and integrations. Kafka Connect provides a framework for connecting Kafka to various data sources and sinks, and Kafka Streams allows for stream processing within the Kafka ecosystem.*
+
+*Apache Kafka has become a fundamental component in many modern data architectures, providing a robust and scalable foundation for building real-time, event-driven systems. It is particularly well-suited for scenarios where high throughput, fault tolerance, and scalability are critical requirements.*
+
 ## **Interview Prep**
 
 ### Caching Solution:

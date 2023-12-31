@@ -1782,6 +1782,8 @@ In conclusion, the choice between an RDBMS and a NoSQL database depends on the s
 - Requirement Analysis
     - Functional Requirements
     - Non-Functional Requirements
+- Stakeholders
+    - users
 - Potential Issues
 - Designing | Discussion | assumptions
     - FR1
@@ -1809,7 +1811,8 @@ In conclusion, the choice between an RDBMS and a NoSQL database depends on the s
         - Scale
             - 1 Billion Monthly Active Users MAUs
             - 5 Billion Monthly Active Users MAUs
-
+- Stakeholders
+    - Users
 - Potential Issues
     - No proper location for this huge amount of data about the road/routes
     - Multiple reasons that can change ETA b/w 2 points
@@ -1866,3 +1869,31 @@ In conclusion, the choice between an RDBMS and a NoSQL database depends on the s
 
 
 
+
+#### Video Streaming Platform
+
+- Requirement Analysis
+    - Functional Requirements
+        - Upload Videos
+        - User's Homepage + Search
+        - Play Videos
+        - Support all devices
+    - Non-Functional Requirements
+        - No Buffering
+            - Low latency and High Availability
+        - User's session time
+        - User recommendation 
+- Stakeholders
+    - Client
+    - Users
+    - Production House
+- Potential Issues
+- Designing | Discussion | assumptions
+    - FR1
+    - FR2
+    - FR3
+- Infrastructure Discussion
+    - NFR1
+    - NFR2
+    - NFR3
+- Flow Diagram

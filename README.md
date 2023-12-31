@@ -1623,6 +1623,59 @@ Here are key aspects of Kafka:
 
 *Apache Kafka has become a fundamental component in many modern data architectures, providing a robust and scalable foundation for building real-time, event-driven systems. It is particularly well-suited for scenarios where high throughput, fault tolerance, and scalability are critical requirements.*
 
+## **Entity-Relationship (ER) Diagram**
+*An Entity-Relationship (ER) diagram is a visual representation of the entities (objects or concepts) within a system and the relationships between those entities. ER diagrams are commonly used in database design to model the structure of a database and illustrate how data entities relate to each other.*
+
+Here are some key components of an ER diagram:
+
+- **Entities**: *Entities represent real-world objects or concepts about which data will be stored in the database. Examples of entities include "Customer," "Product," or "Employee."*
+
+- **Attributes**: *Attributes are the properties or characteristics of entities. For example, a "Customer" entity might have attributes such as "CustomerID," "Name," and "Email."*
+
+- **Relationships**: *Relationships define how entities are related to each other. They establish connections between entities and describe the nature of the association. Relationships can be one-to-one, one-to-many, or many-to-many.*
+
+- **Cardinality**: *Cardinality specifies the number of instances of one entity that can be related to the number of instances of another entity. It is expressed using notations like "1" (one), "M" (many), or "0..1" (zero or one).*
+
+- **Primary Key**: *A primary key uniquely identifies each record in an entity. It is typically represented by an underlined attribute in an ER diagram.*
+
+
+- **Foreign Key**:* A foreign key is a field that refers to the primary key in another table. It establishes a link between two tables and is represented in an ER diagram to show relationships.*
+
+Here is a simplified example of an ER diagram for a university database:
+
+```txt
++----------------+         +-------------------+
+|   Student      |         |      Course       |
++----------------+         +-------------------+
+| StudentID (PK) |---------| CourseID (PK)     |
+| Name           |         | Title             |
+| Major          |         | Credits           |
++----------------+         +-------------------+
+         |
+         | Enrolls
+         |
++--------------------------+
+|        Enrollment       |
++--------------------------+
+| EnrollmentID (PK)       |
+| StudentID (FK)          |
+| CourseID (FK)           |
+| Grade                   |
++--------------------------+
+
+```
+
+In this example:
+
+- "Student" and "Course" are entities.
+- "Enrollment" represents the relationship between students and courses.
+- "StudentID" and "CourseID" are primary keys, and "EnrollmentID" is a primary key for the "Enrollment" entity.
+- The "Enrollment" entity includes foreign keys ("StudentID" and "CourseID") that reference the primary keys in the "Student" and "Course" entities, establishing the relationships.
+
+*ER diagrams serve as valuable tools for database designers and developers to understand the structure of a database and ensure that the relationships and constraints between entities are well-defined.*
+
+
+
 ## **Interview Prep**
 
 ### Caching Solution:

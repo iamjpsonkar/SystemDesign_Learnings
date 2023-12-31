@@ -1674,6 +1674,69 @@ In this example:
 
 *ER diagrams serve as valuable tools for database designers and developers to understand the structure of a database and ensure that the relationships and constraints between entities are well-defined.*
 
+## RDBMS vs NoSQL Database Comparison
+
+### RDBMS (Relational Database Management Systems)
+
+#### Definition:
+RDBMS is a type of database management system that uses a tabular structure with rows and columns to store and manage data.
+
+#### Data Model:
+- Follows a structured and predefined schema.
+- Data is organized in tables with fixed columns.
+
+#### Schema:
+- Requires a predefined schema.
+- Enforces data integrity through relationships and constraints.
+
+#### Scalability:
+- Vertical scaling is common, adding more resources to a single server.
+- May face challenges with horizontal scaling.
+
+#### Transactions:
+- ACID (Atomicity, Consistency, Isolation, Durability) properties are enforced.
+- Well-suited for applications where data integrity is critical.
+
+#### Use Cases:
+- Well-suited for complex queries and transactions.
+- Commonly used in traditional business applications, finance, and applications with complex relationships.
+
+### NoSQL Databases
+
+#### Definition:
+NoSQL databases are a type of database management system that provides a flexible schema and is designed for handling unstructured or semi-structured data.
+
+#### Data Model:
+- Follows various data models, including document-oriented, key-value pairs, wide-column stores, and graphs.
+- No strict schema requirements.
+
+#### Schema:
+- Schema-less or dynamic schema.
+- Allows flexibility to add or remove fields without affecting existing data.
+
+#### Scalability:
+- Well-suited for horizontal scaling across distributed systems.
+- Can easily scale out to handle large volumes of data.
+
+#### Transactions:
+- May not strictly adhere to ACID properties.
+- Provides eventual consistency, making it suitable for distributed and highly scalable systems.
+
+#### Use Cases:
+- Ideal for scenarios with rapidly changing or evolving data structures.
+- Commonly used in web applications, real-time big data analytics, and applications with high scalability requirements.
+
+### Conclusion:
+
+| Criteria                | RDBMS                            | NoSQL Database                    |
+|-------------------------|----------------------------------|-----------------------------------|
+| Data Model              | Tabular structure with fixed schema | Flexible data models              |
+| Schema                  | Predefined schema                 | Dynamic or schema-less            |
+| Scalability            | Vertical scaling                  | Horizontal scaling                |
+| Transactions           | ACID properties enforced          | May not strictly adhere to ACID   |
+| Use Cases               | Complex queries and transactions  | Rapidly changing data structures  |
+
+In conclusion, the choice between an RDBMS and a NoSQL database depends on the specific requirements of the application, including data structure, scalability needs, and the nature of transactions.
 
 
 ## **Interview Prep**
